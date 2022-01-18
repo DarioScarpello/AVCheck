@@ -107,8 +107,8 @@
                 <label for="exampleInputEmail1">Eigene Nachrichten</label>
                 <div class="form-group">
                     <p></p>
-                    <form action=@HomeController.WriteCSVFile() method="get" id="writecsv">
-<textarea onkeyup="textCounter(this,'counter',50);" class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                    <form action="/Home/WriteCSVFile" method="post" id="writecsv">
+<textarea name="p1" onkeyup="textCounter(this,'counter',50);" class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
                     </form>
                     <script>
 function textCounter(field,field2,maxlimit)
@@ -127,7 +127,7 @@ function textCounter(field,field2,maxlimit)
                 </div>
                 <hr />
 
-                <button type="button" class="btn btn-primary" onclick="window.location.href = '../Home/Index';">Senden</button>
+                <button form="writecsv" type="submit" class="btn btn-primary" @*onclick="window.location.href = '../Home/Index';"*@>Senden</button>
             </div>
 
         </div>

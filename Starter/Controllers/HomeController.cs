@@ -33,9 +33,11 @@ namespace Starter.Controllers
             }
         }
 
-        public static void WriteCSVFile(string text) 
+        [HttpPost]
+        public IActionResult WriteCSVFile(string p1) 
         {
-            System.IO.File.WriteAllText("wwwroot/anzeigen.csv", text);
+            System.IO.File.WriteAllText("wwwroot/anzeigen.csv", p1);
+            return View("Index");
         }
 
         public IActionResult Privacy()
