@@ -34,7 +34,7 @@ namespace Starter.Controllers
         }
 
         [HttpPost]
-        public IActionResult WriteCSVFile(string p1) 
+        public IActionResult WriteCSVFile(string p1) /*kere hat geholfen*/ 
         {
             System.IO.File.WriteAllText("wwwroot/anzeigen.csv", p1);
             return View("Index");
