@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -21,6 +22,20 @@ namespace Starter.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+
+        public static string ReadCSVFile()
+        {
+            using (var reader = new StreamReader("wwwroot/anzeigen.csv"))
+            {
+                string line = reader.ReadLine();
+                return line;
+            }
+        }
+
+        public static void WriteCSVFile(string text) 
+        {
+            System.IO.File.WriteAllText("wwwroot/anzeigen.csv", text);
         }
 
         public IActionResult Privacy()

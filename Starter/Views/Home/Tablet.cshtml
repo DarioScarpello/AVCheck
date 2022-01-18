@@ -1,3 +1,4 @@
+@using Starter.Controllers
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,12 +10,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
     <script src="~/css/Tablet.css"></script>
+    <meta http-equiv="refresh" content="10"/>
 </head>
 <body>
     <header> 
         <video src="~/videos/gradient.mp4" autoplay loop muted></video>
         <div class="overlay">
-            <h1>Bitte nicht stören.</h1>
+            @*<h1>@{((HomeController)this.ViewContext.Controller).ReadCSVFile();}</h1>*@
+            <h1>@HomeController.ReadCSVFile()</h1>
         </div>
         <img src="~/images/AVCheck_klein.svg"> 
     </header>

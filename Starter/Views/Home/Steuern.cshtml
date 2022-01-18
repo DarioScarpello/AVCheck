@@ -1,3 +1,4 @@
+@using Starter.Controllers
 <!doctype html>
 <html lang="en">
 <head>
@@ -106,7 +107,9 @@
                 <label for="exampleInputEmail1">Eigene Nachrichten</label>
                 <div class="form-group">
                     <p></p>
+                    <form action=@HomeController.WriteCSVFile() method="get" id="writecsv">
 <textarea onkeyup="textCounter(this,'counter',50);" class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                    </form>
                     <script>
 function textCounter(field,field2,maxlimit)
 {
