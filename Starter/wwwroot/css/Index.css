@@ -1,0 +1,37 @@
+﻿#header {
+    background-color: rgb(230, 230, 230);
+}
+
+/* #buttonSteuerung{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 250px;
+    
+    font-size: 25px;
+} */
+
+/* #buttonTablet{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    font-size: 25px;
+} */
+
+.Button1 button {
+    border: 3px solid black;
+    width: 40%;
+    height: 500px;
+    align-items: center;
+    font-size: 200%;
+    margin: 4%;
+}
+
+img {
+    top: 0px;
+    left: 0px;
+    height: auto;
+    width: 50px;
+    padding-left: 10px;
+}

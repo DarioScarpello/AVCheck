@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Starter Seite";
+}
+@*@{ var imagePath = "";
+    if (Request["photoChoice"] != null)
+    {
+        imagePath = @"images\" + Request["photoChoice"];
+    }
+}*@
+<!--Starterseite mit zwei Knöpfen, die zum Passwort oder zum Tablet führen-->
+
+<div id="header">
+</div>
+
+<div class="Button1">
+    <button onclick="window.location.href = '../Home/Passwort';">Zur Steuerungsmaske</button>
+    <button onclick="window.location.href = '../Home/Tablet';">Zum Tablet Interface</button>
+</div>
+
+<!-- <script src="./Auswahlmaske.css"></script> -->

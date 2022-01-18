@@ -1,0 +1,213 @@
+body {
+    font-family: "HelvNeueOrange", "Helvetica Neue", Helvetica, Arial, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 120%;
+    font-weight: normal;
+    line-height: 1.25;
+    color: #000;
+}
+
+.bg-dark {
+    --bs-bg-opacity: 1;
+    background-color: #DEDEDE !important;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 20%;
+}
+
+.b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.form-control-dark {
+    color: #fff;
+    background-color: var(--bs-dark);
+    border-color: var(--bs-gray);
+}
+
+    .form-control-dark:focus {
+        color: #fff;
+        background-color: var(--bs-dark);
+        border-color: #fff;
+        box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+    }
+
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+}
+
+.text-small {
+    font-size: 100%;
+}
+
+.dropdown-toggle {
+    outline: 0;
+}
+
+.form-group {
+    align-content: center;
+    width: 100%
+}
+
+.back {
+    background: #e2e2e2;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.div-center {
+    width: 500px;
+    height: 400px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    padding: 1em 2em;
+    display: table;
+}
+
+.form-control {
+    font-size: 120%
+}
+
+.btn-check:active + .btn-secondary, .btn-check:checked + .btn-secondary, .btn-secondary.active, .btn-secondary:active, .show > .btn-secondary.dropdown-toggle {
+    color: #fff;
+    background-color: #F80000;
+    border-color: #CA0000;
+    line-height: 1.5;
+    font-size: 100%;
+    border: 1px solid;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #F80000;
+    border-color: #CA0000;
+    line-height: 1.5;
+    font-size: 100%;
+    border: 1px solid;
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+    color: #ffffff !important;
+    background-color: #F80000 !important;
+    border-color: #CA0000 !important;
+    line-height: 1.5;
+    font-size: 100%;
+    border: 1px solid;
+}
+
+
+.btn-primary {
+    color: #fff;
+    background-color: #F80000;
+    border-color: #F80000;
+    line-height: 1.5;
+    font-size: 100%;
+    border: 1px solid;
+}
+
+    .btn-primary:active {
+        color: #fff;
+        background-color: #F80000;
+        border-color: #F80000;
+        line-height: 1.5;
+        font-size: 100%;
+        border: 1px solid;
+    }
+
+.btn-secondary {
+    color: #fff;
+    background-color: #F80000;
+    border-color: #CA0000;
+    line-height: 1.5;
+    font-size: 100%;
+    border: 1px solid;
+}
+
+
+div.content {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+h3 {
+    font-size: 250%;
+    font-weight: bold;
+}
+
+label {
+    font-size: 120%
+}
+
+.col-4 {
+    flex: 0 0 auto;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 0%;
+}
+
+div.list-group {
+    width: 100%
+}
+
+.accordion-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    font-size: 70%;
+    font-weight: bold;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+    border: 0;
+    border-radius: 0;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,border-radius .15s ease;
+}
+
+.accordion-body {
+    padding-top: 2.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0%;
+}
+
+.noborder {
+    border: 0;
+    outline: none;
+}
+
+.nothing {
+    border: 0;
+    outline: none;
+}
+
+input:disabled {
+    background-color: #ffffff00;
+    border: 0px;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
