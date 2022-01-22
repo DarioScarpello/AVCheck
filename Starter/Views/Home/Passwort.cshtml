@@ -91,17 +91,19 @@
 
                 <h3>Login</h3>
                 <hr />
-                <form>
+               
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="" placeholder="Password">
+                        <label for="exampleInputPassword1">Passwort</label>
+                        <form action="/Home/CheckPassword" method="post" id="checkPwd">
+                            <input type="password" name="enteredPassword" class="form-control" id="" placeholder="Passwort">
+                        </form>
                     </div>
-                    <div class="btn-group-toggle" data-toggle="buttons">
-                        <button type="button" class="btn btn-primary" onclick="window.location.href = '../Home/Steuern';">Login</button>
+                    @*<div class="btn-group-toggle" data-toggle="buttons">*@
+                        <button type="submit" form="checkPwd" class="btn btn-primary" @*onclick="window.location.href = '../Home/Steuern';"*@>Login</button>
 
-                    </div>
+                    @*</div>*@
 
-                </form>
+                
             </div>
         </div>
     </main>

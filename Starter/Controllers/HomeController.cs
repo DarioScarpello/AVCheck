@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -34,10 +36,50 @@ namespace Starter.Controllers
         }
 
         [HttpPost]
-        public IActionResult WriteCSVFile(string p1) /*kere hat geholfen*/ 
+        public IActionResult WriteCSVFile(string p1) 
         {
             System.IO.File.WriteAllText("wwwroot/anzeigen.csv", p1);
             return View("Index");
+        }
+
+        [HttpPost]
+        public IActionResult CheckPassword(string enteredPassword) 
+        {
+            string password;
+            using (var reader = new StreamReader("wwwroot/passwort.csv"))
+            {
+                password = reader.ReadLine();
+            }
+            string hash = GetHashString(enteredPassword);
+          
+
+
+
+            if (hash == password)
+            {
+                return View("Steuern");
+                
+            }
+            else
+            {
+                return View("Passwort");
+            }
+
+
+            
+        }
+        public static byte[] GetHash(string inputString)
+        {
+            using (HashAlgorithm algorithm = SHA256.Create())
+                return algorithm.ComputeHash(Encoding.UTF8.GetBytes(inputString));
+        }
+        public static string GetHashString(string inputString)
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (byte b in GetHash(inputString))
+                sb.Append(b.ToString("X2"));
+
+            return sb.ToString();
         }
 
         public IActionResult Privacy()

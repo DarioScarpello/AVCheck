@@ -14,4 +14,13 @@
     <PackageReference Include="CsvHelper" Version="27.2.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="wwwroot\anzeigen.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\passwort.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
