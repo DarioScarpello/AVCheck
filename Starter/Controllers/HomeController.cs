@@ -50,11 +50,16 @@ namespace Starter.Controllers
             {
                 password = reader.ReadLine();
             }
+            if (enteredPassword == null)
+            {
+                return View("Passwort");
+            }
+
             string hash = GetHashString(enteredPassword);
           
 
 
-
+            
             if (hash == password)
             {
                 return View("Steuern");
